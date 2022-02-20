@@ -25,8 +25,8 @@ Open any one of the doors to write your own destiny!"\n
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
-
-    decision1=input("Which door do you choose?\n1. The door with a dragonfly on it.\n2. The door with a star on it.\n")
+    
+    decision1=input("Which door do you choose?\n1. The door with a dragonfly on it.\n\n2. The door with a star on it.\n")
     
     if decision1.strip()=='1':
         story1_intro()   
@@ -54,6 +54,7 @@ It’s a little girl who holds your hand, wipes your tears, gives you the bright
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
+    sleep(2)    
     global start1
     start1=1
     
@@ -65,7 +66,7 @@ def story1_intro(x1=0):      #CHOICE 1
         story1_introduction()
         
     os.system('cls')
-    s2='''The two of you play around running on the sandy ground, swinging and laughing as you see how far up you are in the sky. The two of you race to the merry go round. 
+    s2='''The two of you play around running on the sandy ground, swinging and laughing as you see how far up you are in the sky. You race to the merry go round. 
 Tired of all the running and playing you both lay down on the grass and look at the sky above, spotting weird faces the clouds make at you. 
 While you are busy laughing, a little dragonfly suddenly appears out of nowhere and the girl, enticed by the dragonfly gets up and starts chasing the dragonfly. 
 A while later, you decide to go after her. 
@@ -77,7 +78,7 @@ Your eyes swell up with tears and as you turn away you see a beam of blue sparkl
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
-    print('1. You can go back to your friend?\n')
+    print('1. You can go back to your friend.\n')
     
     
     if x1==0:
@@ -185,9 +186,7 @@ Your tears disappear and you smile at her. The two of you decide to go back and 
 The two of you laugh as you run all around chasing dragonflies, you race to reach the seesaw, you play hide and seek and swing on the red swings. 
 As the little girl swings high in the air you decide to go get her a flower. 
 On your way back, you see her fallen on the ground. 
-As you run towards her, you see a thousands of dragonflies buzzing near by.
-\n
-'''
+As you run towards her, you see a thousands of dragonflies buzzing near by.\n'''
 
     for char in s5:
         sys.stdout.write(char)
@@ -232,6 +231,7 @@ There is a comfortable quiteness all around.\n '''
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
+    sleep(2)    
     global start2
     start2=1
 
@@ -252,7 +252,7 @@ You walk towards a field of tulips and as you look at the blooming flowers, your
 
     print("1. You can continue walking further in the field.\n")
     if y1==0:
-        print("2. You can chase the butterfly to see where it wants you to go\n")  
+        print("2. You can chase the butterfly to see where it wants you to go.\n")  
 
     a=input()
     if a.strip()=='1':
@@ -274,16 +274,15 @@ You follow the sound and end up at a huge waterfall.
 The water is transparent and the pebbles can be seen shining underneath. 
 You see a diamond stuck between some rocks inside the body of water.
 As you go closer, you see a signboard stuck on a boulder that says, “There is more depth to me than what you perceive”.
-When you look down, you see colorful feathers making a trail.
-\n'''
+When you look down, you see colorful feathers making a trail.\n'''
 
     for char in s7:
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
-    print("1. You can jump into the water\n")
+    print("1. You can jump into the water.\n")
     if y2==0:
-        print("2. You can follow the trail\n")  
+        print("2. You can follow the trail.\n")  
     b=input()
     if b.strip()=='1':
         os.system('cls')
@@ -320,7 +319,7 @@ Towards the right, you see little ladybugs following a bright rainbow out of the
         sys.stdout.flush()
         sleep(.05)
 
-    print("1.You can pick up the feather and see what might happen.\n")
+    print("1. You can pick up the feather and see what might happen.\n")
     if y3==0:
         print("2. You can escape the cottage through the window.\n")
 
@@ -347,23 +346,23 @@ def story2_3(y4=0):         #CHOICE 4
         story2_introduction()
     s9='''\nThe glass wall disappears into thin air. You step into this mesmerizing world. 
 Around you are magnanimous trees colored in hues of orange red and pink. The sweet smell of the flowers has enveloped the surroundings.
-You walk steadily, trying to absorb the beauty of this mysterioud place. Suddenlu you hear a melody. You being to follow it
+You walk steadily, trying to absorb the beauty of this mysterious place. Suddenly you hear a melody. You begin to follow it.
 The melody takes you to a white sea. The twinkling stars above have made the sea appear white.
-All of a sudden you see a bale of tiny turtles running on the shore.
+All of a sudden you see a bale of tiny turtles come running on the shore.
 You feel something crawling on your leg.
 Scared, you look down. To your surprise, its a baby turtle climbing up your leg!
 You pick it up.
 When you bring it closer, you see the same star shaped symbol on its shell!
-Suudenly a the stars from above start coming closer, forming a little tunnel!'''
+Suddenly akk the stars from above start coming closer, forming a little tunnel!\n'''
 
     for char in s9:
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
 
-    print("2. You can stay where you are.")
+    print("1. You can stay where you are.\n")
     if y4==0:
-        print("2. You can see where these stars take you\n")  
+        print("2. You can see where these stars take you.\n")  
     d=input()
     if d.strip()=='1':
         os.system('cls')
@@ -408,12 +407,12 @@ You see a little two little igloos towards your left\n'''
         sys.stdout.write(char)
         sys.stdout.flush()
         sleep(.05)
-    print('1.You can cross the ice fall and continue your expedition\n')
+    print('1. You can cross the ice fall and continue your expedition.\n')
     
     if z1==0:
-        print("2. You can enter the first igloo\n")     
+        print("2. You can enter the first igloo.\n")     
     if z2==0:
-        print("3. You can enter the second igloo\n")   
+        print("3. You can enter the second igloo.\n")   
     a=input()
     
     if a.strip()=='1':
@@ -467,9 +466,9 @@ Towards your right and left are two paths. Both seem to go nowhere.\n'''
     print('1. You can chase the yellow lights.\n')
     
     if z3==0:
-        print("2. You can explore wher ethe 1st path goes.\n")     
+        print("2. You can explore where the 1st path goes.\n")     
     if z4==0:
-        print("3. You can explore wher ethe 2nd path goes.\n")   
+        print("3. You can explore where the 2nd path goes.\n")   
 
     b=input()
     if b.strip()=='1':
