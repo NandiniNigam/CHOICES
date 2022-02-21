@@ -158,7 +158,11 @@ class paintbrush
     void intro_line()
     {
         system("CLS");
-        typewriter("the intro about the whole path");
+        
+        typewriter("You have entered in a new world where all you find is beautiful meadows, pink skies and fluttering butterflies.");
+        typewriter("\nThe clouds seem dreamy and wispy. The air feels pleasent and fresh.");
+        typewriter("\nThere is a comfortable quiteness all around.");
+
         starter2=1;
         cout<<"\n\n~Press any key to continue~";
         getch();
@@ -169,9 +173,16 @@ class paintbrush
         {              
             system("CLS");
             if(starter2==0){intro_line();}
-            typewriter("intro paintbrush");
-            cout<<"\n1- Go to story 2 : ";
-            if(x==0){cout<<"\n2- run away : ";}
+            
+            typewriter("You walk through the grassland only to see yellow objects floating far away. ");
+            typewriter("\nYou run in the same direction to find out what these bright yellow objects are! ");
+            typewriter("\nAs you reach closer, you see that these objects are mere candles sparkling in hues of orange and yellow. The candles leave you in wonder and surprise. ");
+            typewriter("\nAs the yellow dots melt in thin air you wonder what this magical place might be. ");
+            typewriter("\nYou walk towards a field of tulips and as you look at the blooming flowers, your attention is diverted by a magnificent butterfly.");
+
+            cout<<"\n\n1. You can continue walking further in the field.";
+            if(x==0){cout<<"\n2. You can chase the butterfly to see where it wants you to go.";}
+            cout<<"\n\nChoice : ";
             cin>>a;
             if(a==1)
                 return story2(0);
@@ -185,9 +196,18 @@ class paintbrush
         {               
             system("CLS");
             if(starter2==0){intro_line();}
-            typewriter("story 2");
-            cout<<"\n1- Go to story 3 : ";
-            if(x==0){cout<<"\n2- run away : ";}
+            
+            typewriter("You run barefoot on the moist grass and look at the beautiful red dots protruding all around you. ");
+            typewriter("\nYou suddenly hear water flowing somewhere far away. ");
+            typewriter("\nYou follow the sound and end up at a huge waterfall. ");
+            typewriter("\nThe water is transparent and the pebbles can be seen shining underneath. ");
+            typewriter("\nYou see a diamond stuck between some rocks inside the body of water.");
+            typewriter("\nAs you go closer, you see a signboard stuck on a boulder that says, *There is more depth to me than what you perceive*.");
+            typewriter("\nWhen you look down, you see colorful feathers making a trail.");
+
+            cout<<"\n\n1. You can jump into the water.";
+            if(x==0){cout<<"\n2. You can follow the trail.";}
+            cout<<"\n\nChoice : ";
             cin>>b;
             if(b==1)
                 return story3(0);
@@ -201,9 +221,21 @@ class paintbrush
         {                
             system("CLS");
             if(starter2==0){intro_line();}
-            typewriter("story 3");
-            cout<<"\n1- Go to story 4 : ";
-            if(x==0){cout<<"\n2- run away : ";}
+            
+            typewriter("You jump into the water but as you touch the diamond, small jellyfishes come to you and take you deep inside the water that seems to have no end. ");
+            typewriter("\nYou go deeper and deeper to find a mine full of diamonds. ");
+            typewriter("\nYou are speechless at what you see. You grab a handful of the diamonds and swim back to the surface. ");
+            typewriter("\nAs you come out of the water onto the land, You see a small cottage. ");
+            typewriter("\nYou walk to the cottage. As you reach the entrance you call out to see if someone is around.");
+            typewriter("\nNo one seems to be there. You knock on the door but no one answers. ");
+            typewriter("\nYou open the door and enter the cottage. You are surprised at what you see in front of you.");
+            typewriter("\nInside you see a world full of mysterious creatures, colorful trees trapped inside a glass wall. ");
+            typewriter("\nYou then see a feather drop at your feet.");
+            typewriter("\nTowards the right, you see little ladybugs following a bright rainbow out of the window.");
+
+            cout<<"\n\n1. You can pick up the feather and see what might happen.";
+            if(x==0){cout<<"\n2. You can escape the cottage through the window.";}
+            cout<<"\n\nChoice : ";
             cin>>c;
             if(c==1)
                 return story4(0);
@@ -217,9 +249,21 @@ class paintbrush
         {               
             system("CLS");
             if(starter2==0){intro_line();}
-            typewriter("story 4");
-            cout<<"\n1- Go to story ending : ";
-            if(x==0){cout<<"\n2- run away : ";}
+            
+            typewriter("The glass wall disappears into thin air. You step into this mesmerizing world. ");
+            typewriter("\nAround you are magnanimous trees colored in hues of orange red and pink. The sweet smell of the flowers has enveloped the surroundings.");
+            typewriter("\nYou walk steadily, trying to absorb the beauty of this mysterious place. Suddenly you hear a melody. You begin to follow it.");
+            typewriter("\nThe melody takes you to a white sea. The twinkling stars above have made the sea appear white.");
+            typewriter("\nAll of a sudden you see a bale of tiny turtles come running on the shore.");
+            typewriter("\nYou feel something crawling on your leg.");
+            typewriter("\nScared, you look down. To your surprise, its a baby turtle climbing up your leg!");
+            typewriter("\nYou pick it up.");
+            typewriter("\nWhen you bring it closer, you see the same star shaped symbol on its shell!");
+            typewriter("\nSuddenly akk the stars from above start coming closer, forming a little tunnel!");
+
+            cout<<"\n\n1. You can stay where you are.";
+            if(x==0){cout<<"\n2. You can see where these stars take you.";}
+            cout<<"\n\nChoice : ";
             cin>>d;
             if(d==1)
                 return story_ending();
@@ -232,7 +276,13 @@ class paintbrush
     int story_ending()
         {    
             system("CLS");
-            typewriter("ending paintbrush");
+            
+            typewriter("You sit down at the beach looking at how the waves stride to the shore and swiftly go back.");
+            typewriter("\nThere is an air of calmness and comfort that surrounds you. ");
+            typewriter("\nYou lay down on the soft sand and look at the sky above which is filled with floating stripes of green and blue.");
+            typewriter("\nSoon you fall asleep. ");
+            typewriter("\nWhen you wake up the next morning, you realize that this was all just a dream!");
+
             getch();
             return 1115;   }
 }pb;
@@ -387,7 +437,6 @@ void errorfunc()
     getch();
     main();
 }
-
 void loadingscreen()
 {
     cout<<endl;
@@ -397,7 +446,6 @@ void loadingscreen()
     {   printf("%c",219);
         Sleep(55);  }
 }
-
 void typewriter(string a)
 {   
     int x=0;
