@@ -293,17 +293,28 @@ class adventure
     int adcheckpoint1()
     {    
         system("CLS");
-        typewriter("adventure continues.....");
+        
+        typewriter("You find yourself back at the rickety shop. You leave the shop all confused and start walking again to complete your trek. ");
+        typewriter("\nAs you take every step, you see the mighty mountains coming closer and closer to you. ");
+
+        cout<<"\n\n~Press any key to continue~";
         getch();
         return adcheckpoint2(0,0);   
     }
     int adcheckpoint2(int x, int y)
     {           
         system("CLS");
-        typewriter("adv 2");
-        cout<<"\n1- continue adventure : ";
-        if(y==0){cout<<"\n2- paintbrush : ";}
-        if(x==0){cout<<"\n3- dragonfly : ";}
+        
+        typewriter("You pace through the harsh terrain . ");
+        typewriter("\nAround you are tall trees, little ferns and eagles circling up in the sky. ");
+        typewriter("\nYou walk and walk and soon find yourself at an ice fall. When you look down all you can see is darkness. ");
+        typewriter("\nTo go further you ought to cross that ice fall. You shiver in fear.");
+        typewriter("\nYou see a little two little igloos towards your left");
+
+        cout<<"\n\n1. You can cross the ice fall and continue your expedition.";
+        if(y==0){cout<<"\n2. You can enter the igloo with a star carved on it.";}
+        if(x==0){cout<<"\n3. You can enter the igloo with a dragonfly carved on it.";}
+        cout<<"\n\nChoice : ";
         cin>>a;
         if(a==1)
             return adcheckpoint3(0,0);
@@ -318,10 +329,27 @@ class adventure
     int adcheckpoint3(int x, int y)
     {   
         system("CLS");
-        typewriter("adv 3");
-        cout<<"\n1- continue adventure : ";
-        if(y==0){cout<<"\n2- paintbrush : ";}
-        if(x==0){cout<<"\n3- dragonfly : ";}
+
+        typewriter("You have made the choice to take the leap of faith.");
+        typewriter("\nYou take a deep breath and jump to the other side. ");
+        typewriter("\nYou overcame your fear and found yourself closer to your destination. ");
+        typewriter("\nYou continue your journey. As you walk further, you find yourself in a breathtaking scenery. ");
+        typewriter("\nYou are surrounded by snowclad mountains, white sheets of glistening snow and icicle covered trees all around. ");
+        typewriter("\nYou go further almost breathless and hungry but completely mind boggled with your surroundings. ");
+        typewriter("\nYou choose to sit down on a log and build a fire for yourself. ");
+        typewriter("\nThe warmth of the fire makes you giddy. You take out your saucepan and start cooking up some soup for yourself. ");
+        typewriter("\nAs you sit there, with soup in your hand, you find a group of climbers coming your way. You wave to them and ask them to give you company. ");
+        typewriter("\nThey come and sit by the fire. Before you know it, its starting to get dark. ");
+        typewriter("\nAll the climbers sing in joy and share with each other stories that mean the most to them. Hearing the stories of other climbers makes you nostalgic. ");
+        typewriter("\nYou get up and climb on top of a rock and look at the dark sky above you. ");
+        typewriter("\nYou see a little firefly up in the sky. You chase it and soon find yourself in the middle of the woods. ");
+        typewriter("\nIn front of you are hues of yellow sparkling far away.");
+        typewriter("\nTowards your right and left are two paths. Both seem to go nowhere.");
+
+        cout<<"\n\n1. You can chase the yellow lights.";
+        if(y==0){cout<<"\n2. You can explore where the Star path goes.";}
+        if(x==0){cout<<"\n3. You can explore where the Dragonfly path goes.";}
+        cout<<"\n\nChoice : ";
         cin>>b;
         if(b==1)
             return last_steps(0,0);
@@ -336,14 +364,40 @@ class adventure
     int last_steps(int x, int y)
     {   
         system("CLS");
-        typewriter("something before the end");
-        cout<<"\n1- go to the ending : ";
-        if(y==0){cout<<"\n2- paintbrush : ";}
-        if(x==0){cout<<"\n3- dragonfly : ";}
+        
+        typewriter("You continue your journey deeper into the woods and finally reach a place which is filled with fireflies.");
+        typewriter("\nAll you can see are tiny dots of yellow fluttering in the sky and you stand there in complete awe and surprise.");
+        typewriter("\nFilled with joy you return back to you route. ");
+        typewriter("\nYou walk further up the trek. ");
+        typewriter("\nThe mountains are a mysterious place filled with exceptional beauty and breathtaking experiences. ");
+        typewriter("\nAs you reach a cliff you look around and see how far up you have reached and rejoice in your achievement. ");
+        typewriter("\nYou again start walking but suddenly a rustling voice startles you. ");
+        typewriter("\nWhen you follow the voice you find a reindeer hiding behind the bushes. ");
+        typewriter("\nYou are mesmerized by this marvelous creature. Seeing you it starts running away. You follow it as its beauty has completely encapsulated you. ");
+        typewriter("\nYou run and run and find yourself on the other side of the cliff . ");
+        typewriter("\nBehind you are the beautiful woods and in front of you is the alluring morning sun beaming on the");
+        typewriter("\nsnow clad mountains that stand tall. You stand on a sheet of land covered with glistening snow. ");
+        typewriter("\nYou then spot the deer on a land that splits into two paths.");
+
+        cout<<"\n\n1. You can stay where you are.";
+        if(y==0){cout<<"\n2. You can explore the star path.";}
+        if(x==0){cout<<"\n2. You can explore the path where the dragonflies are.";}
+        cout<<"\n\nChoice : ";
         cin>>c;
         if(c==1)
-           {   typewriter("The guy is at the top of the mountain with his doggos");
-           getch(); return 14;}
+            {   
+                system("CLS");
+
+                typewriter("\nThe mountains, The beaming sun and the sparkling snow are a mesmerzing place to be at.");
+                typewriter("\nYou realize that this is the place that gives you the most peace. ");
+                typewriter("\nThe air has a calming touch to it. The surreal beauty of your surrounding leave you spellbound.");
+                typewriter("\nYou feel that this is the place where you belong to the most.");
+                typewriter("\nYou decide to leave your current mundane life and shift to these magical mountains.");
+                typewriter("\nMonths later you build a small cottage on the very spot and live happily with your two dogs and endless dreams.");
+                
+                getch(); 
+                return 14;
+            }
         if(c==2&&y==0)
             return 23;
         if(c==3&&x==0)
@@ -425,6 +479,9 @@ int main()
             default: errorfunc();
         }
     }
+
+    system("CLS");
+    cout<<"Thank You!";
 
 getch();
 return 0;
