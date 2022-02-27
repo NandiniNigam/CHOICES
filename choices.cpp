@@ -27,7 +27,7 @@ class dragonfly
         typewriter("\nand takes you to the swings where you both play");
 
         starter=1;
-        cout<<"\n\n~Press any key to continue~";
+        cout<<"\n\nPress any key to continue.";
         getch();
         system("CLS");
     }
@@ -37,7 +37,7 @@ class dragonfly
             system("CLS");
             if(starter==0){intro_line();}
             
-            typewriter("The two of you play around running on the sandy ground, swinging and laughing as you see how far up you are in the sky.You race to the merry go round. ");
+            typewriter("The two of you play around running on the sandy ground, swinging and laughing as you see how far up you are in the sky. You race to the merry go round. ");
             typewriter("\nTired of all the running and playing you both lay down on the grass and look at the sky above, spotting weird faces the clouds make at you. ");
             typewriter("\nWhile you are busy laughing, a little dragonfly suddenly appears out of nowhere and the girl, enticed by the dragonfly gets up and starts chasing the dragonfly. ");
             typewriter("\nA while later, you decide to go after her. ");
@@ -45,9 +45,9 @@ class dragonfly
             typewriter("\nYou finally see her on a bridge but to your utter surprise you see her playing with another boy. ");
             typewriter("\nYour eyes swell up with tears and as you turn away you see a beam of blue sparkly light in front of you.");
 
-            cout<<"\n\n1. You can go back to your friend.";
-            if(x==0){cout<<"\n2. You can see where the sparkles take you.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[36m\n\n1. You can go back to your friend.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can see where the sparkles take you.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>a;
             if(a==1)
                 return other_guy(0);
@@ -67,14 +67,18 @@ class dragonfly
             typewriter("\nShe bids goodbye to the other boy and excited about playing on the slides, follows you back to the playground.");
             typewriter("\nAs the two of you goofily play on the slides, the little girl whispers in your ear, that she wants to take you to a special place.");
             typewriter("\nThe two of you get off the slide and start walking.");
-            typewriter("\nYou ask her repeatedly “Where are we going?” but the only answer you'd get is *Shush just come with me* followed by a giggle");
+            typewriter("\nYou ask her repeatedly ");
+            printf("\x1B[36mWhere are we going?\033[0m");
+            typewriter(" but the only answer you'd get is ");
+            printf("\x1B[36mShush just come with me\033[0m");
+            typewriter(" followed by a giggle.");
             typewriter("\nYou finally reach the place. It's a small cave behind the bushes. She tells you that this is her hiding place");
             typewriter("\nYou are scared to go inside the dark cave");
             typewriter("\nYou suddenly hear a creaking sound coming from behind you");
 
-            cout<<"\n\n1. You can Enter the cave.";
-            if(x==0){cout<<"\n2. You can turn around, what you will see is a door. Do you wish to see where it takes you?";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[36m\n\n1. You can Enter the cave.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can turn around, what you will see is a door. Do you wish to see where it takes you?\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>b;
             if(b==1)
                 return hiding_place(0);
@@ -103,9 +107,9 @@ class dragonfly
             typewriter("\nSeeing this the other kids start laughing and when you look towards the left you see that the little girl laughing too.");
             typewriter("\nSeeing her laugh at you breaks your heart. When you turn your face away from her you see a bright white light that almost looks like a tunnel");
 
-            cout<<"\n\n1. You can continue your journey with the little girl.";
-            if(x==0){cout<<"\n2. You can see where this bright light leads to.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[36m\n\n1. You can continue your journey with the little girl.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can see where this bright light leads to.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>c;
             if(c==1)
                 return bitching(0);
@@ -128,9 +132,9 @@ class dragonfly
             typewriter("\nOn your way back, you see her fallen on the ground.");
             typewriter("\nAs you run towards her, you see a thousands of dragonflies buzzing near by");
 
-            cout<<"\n\n1. You can continue your journey with the little girl";
-            if(x==0){cout<<"\n2. You can see where the dragonflies want to take you.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[36m\n\n1. You can continue your journey with the little girl.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can see where the dragonflies want to take you.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>d;
             if(d==1)
                 return girl_falls();
@@ -145,9 +149,9 @@ class dragonfly
             system("CLS");
 
             typewriter("You choose to go back to your friend.");
-            typewriter("\nThis time you help her up, wipe her tears and give her a little yellow sunflower as a gift...");
-            typewriter("\nSeeing the flower her face lights up like a star and the two of you live happily playing in the little playground for a long long time.");
-
+            typewriter("\nThis time you help her up, wipe her tears and give her a little yellow sunflower as a gift.\n");
+            typewriter("\nSeeing the flower her face lights up like a star and the ");
+            printf("\x1B[36mtwo of you live happily playing in the little playground for a long long time.\033[0m");
             getch();
             return 115;   }
 }df;
@@ -164,7 +168,7 @@ class paintbrush
         typewriter("\nThere is a comfortable quiteness all around.");
 
         starter2=1;
-        cout<<"\n\n~Press any key to continue~";
+        cout<<"\n\nPress any key to continue.";
         getch();
         system("CLS");
     }
@@ -180,9 +184,9 @@ class paintbrush
             typewriter("\nAs the yellow dots melt in thin air you wonder what this magical place might be. ");
             typewriter("\nYou walk towards a field of tulips and as you look at the blooming flowers, your attention is diverted by a magnificent butterfly.");
 
-            cout<<"\n\n1. You can continue walking further in the field.";
-            if(x==0){cout<<"\n2. You can chase the butterfly to see where it wants you to go.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[93m\n\n1. You can continue walking further in the field.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can chase the butterfly to see where it wants you to go.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>a;
             if(a==1)
                 return story2(0);
@@ -202,12 +206,13 @@ class paintbrush
             typewriter("\nYou follow the sound and end up at a huge waterfall. ");
             typewriter("\nThe water is transparent and the pebbles can be seen shining underneath. ");
             typewriter("\nYou see a diamond stuck between some rocks inside the body of water.");
-            typewriter("\nAs you go closer, you see a signboard stuck on a boulder that says, *There is more depth to me than what you perceive*.");
+            typewriter("\nAs you go closer, you see a signboard stuck on a boulder that says, ");
+            printf("\x1B[93mThere is more depth to me than what you perceive.\033[0m");
             typewriter("\nWhen you look down, you see colorful feathers making a trail.");
 
-            cout<<"\n\n1. You can jump into the water.";
-            if(x==0){cout<<"\n2. You can follow the trail.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[93m\n\n1. You can jump into the water.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can follow the trail.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>b;
             if(b==1)
                 return story3(0);
@@ -233,9 +238,9 @@ class paintbrush
             typewriter("\nYou then see a feather drop at your feet.");
             typewriter("\nTowards the right, you see little ladybugs following a bright rainbow out of the window.");
 
-            cout<<"\n\n1. You can pick up the feather and see what might happen.";
-            if(x==0){cout<<"\n2. You can escape the cottage through the window.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[93m\n\n1. You can pick up the feather and see what might happen.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can escape the cottage through the window.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>c;
             if(c==1)
                 return story4(0);
@@ -261,9 +266,9 @@ class paintbrush
             typewriter("\nWhen you bring it closer, you see the same star shaped symbol on its shell!");
             typewriter("\nSuddenly akk the stars from above start coming closer, forming a little tunnel!");
 
-            cout<<"\n\n1. You can stay where you are.";
-            if(x==0){cout<<"\n2. You can see where these stars take you.";}
-            cout<<"\n\nChoice : ";
+            printf("\x1B[93m\n\n1. You can stay where you are.\033[0m");
+            if(x==0){printf("\x1B[32m\n2. You can see where these stars take you.\033[0m");}
+            printf("\n\n\x1B[35mChoice : \033[0m");
             cin>>d;
             if(d==1)
                 return story_ending();
@@ -281,7 +286,7 @@ class paintbrush
             typewriter("\nThere is an air of calmness and comfort that surrounds you. ");
             typewriter("\nYou lay down on the soft sand and look at the sky above which is filled with floating stripes of green and blue.");
             typewriter("\nSoon you fall asleep. ");
-            typewriter("\nWhen you wake up the next morning, you realize that this was all just a dream!");
+            printf("\x1B[93m\n\nWhen you wake up the next morning, you realize that this was all just a dream!\033[0m");
 
             getch();
             return 1115;   }
@@ -297,7 +302,7 @@ class adventure
         typewriter("You find yourself back at the rickety shop. You leave the shop all confused and start walking again to complete your trek. ");
         typewriter("\nAs you take every step, you see the mighty mountains coming closer and closer to you. ");
 
-        cout<<"\n\n~Press any key to continue~";
+        cout<<"\n\nPress any key to continue.";
         getch();
         return adcheckpoint2(0,0);   
     }
@@ -311,10 +316,10 @@ class adventure
         typewriter("\nTo go further you ought to cross that ice fall. You shiver in fear.");
         typewriter("\nYou see a little two little igloos towards your left");
 
-        cout<<"\n\n1. You can cross the ice fall and continue your expedition.";
-        if(y==0){cout<<"\n2. You can enter the igloo with a star carved on it.";}
-        if(x==0){cout<<"\n3. You can enter the igloo with a dragonfly carved on it.";}
-        cout<<"\n\nChoice : ";
+        printf("\x1B[32m\n\n1. You can cross the ice fall and continue your expedition.\033[0m");
+        if(y==0){printf("\x1B[93m\n2. You can enter the igloo with a star carved on it.\033[0m");}
+        if(x==0){printf("\x1B[36m\n3. You can enter the igloo with a dragonfly carved on it.\033[0m");}
+        printf("\n\n\x1B[35mChoice : \033[0m");
         cin>>a;
         if(a==1)
             return adcheckpoint3(0,0);
@@ -346,10 +351,10 @@ class adventure
         typewriter("\nIn front of you are hues of yellow sparkling far away.");
         typewriter("\nTowards your right and left are two paths. Both seem to go nowhere.");
 
-        cout<<"\n\n1. You can chase the yellow lights.";
-        if(y==0){cout<<"\n2. You can explore where the Star path goes.";}
-        if(x==0){cout<<"\n3. You can explore where the Dragonfly path goes.";}
-        cout<<"\n\nChoice : ";
+        printf("\x1B[32m\n\n1. You can chase the yellow lights.\033[0m");
+        if(y==0){printf("\x1B[93m\n2. You can explore where the Star path goes.\033[0m");}
+        if(x==0){printf("\x1B[36m\n3. You can explore where the Dragonfly path goes.\033[0m");}
+        printf("\n\n\x1B[35mChoice : \033[0m");
         cin>>b;
         if(b==1)
             return last_steps(0,0);
@@ -379,10 +384,10 @@ class adventure
         typewriter("\nsnow clad mountains that stand tall. You stand on a sheet of land covered with glistening snow. ");
         typewriter("\nYou then spot the deer on a land that splits into two paths.");
 
-        cout<<"\n\n1. You can stay where you are.";
-        if(y==0){cout<<"\n2. You can explore the star path.";}
-        if(x==0){cout<<"\n2. You can explore the path where the dragonflies are.";}
-        cout<<"\n\nChoice : ";
+        printf("\x1B[32m\n\n1. You can stay where you are.\033[0m");
+        if(y==0){printf("\x1B[93m\n2. You can explore the star path.\033[0m");}
+        if(x==0){printf("\x1B[36m\n3. You can explore the path where the dragonflies are.\033[0m");}
+        printf("\n\n\x1B[35mChoice : \033[0m");
         cin>>c;
         if(c==1)
             {   
@@ -413,6 +418,25 @@ int main()
     system("CLS");
     //loadingscreen();
     int a,b=1,check;
+
+    cout<<"\n\t\t\t\t\t                                                                                                          ";
+    cout<<"\n\t\t\t\t\t           _ _ _ _   __       __     _ _ _ _       _ _ _ _ _ _    _ _ _ _   _ _ _ _ _ _  _ _ _ _ _ _      ";
+    cout<<"\n\t\t\t\t\t          /       / / /|     / /|   /       /`    /          /   /      /  /          / /          /      ";
+    cout<<"\n\t\t\t\t\t          $$ $$ $$  $$ |     $$ |   $$ $$ $$  `   $$ $$ $$ $$    $$ $$ $$  $$ $$ $$ $$  $$ $$ $$ $$       ";
+    cout<<"\n\t\t\t\t\t        $$  |       $$ |_ _ _$$ | $$        $$/|      $$ |     $$  |       $$  |_ _     $$  |_ _ _        ";
+    cout<<"\n\t\t\t\t\t        $$  |       $$ /     $$ | $$        $$ |      $$ |     $$  |       $$ /    /    $$ /      /       ";
+    cout<<"\n\t\t\t\t\t        $$  |       $$ $$ $$ $$ | $$        $$ |      $$ |     $$  |       $$ $$ $$     $$ $$ $$ $$       ";
+    cout<<"\n\t\t\t\t\t        $$  |_ _ _  $$ |     $$ | $$        $$ |      $$ |_ _  $$  |_ _ _  $$  |_ _ _    _ _ _ _ $$       ";
+    cout<<"\n\t\t\t\t\t        $$ /      / $$ |     $$ | $$        $$/       $$ /  /  $$ /     /  $$ /      /  /        $$       ";
+    cout<<"\n\t\t\t\t\t          $$ $$ $$  $$/      $$/    $$ $$ $$      $$ $$ $$ $$   $$ $$ $$   $$ $$ $$ $$  $$ $$ $$ $$       ";
+
+    typewriter("\n\nWelcome to ");
+    printf("\x1B[35mCHOICES\033[0m");
+    typewriter(".\nGet ready to explore where your Choices takes you");
+    cout<<"\n\nPress any key to continue.";
+
+    getch();
+    system("CLS");
      
     typewriter("You are on an expedition to the mountains. Filled with zeal, you have begun your journey."); 
     typewriter("\nA journey filled with adventures and surprises every step of the way.");
@@ -420,19 +444,23 @@ int main()
     typewriter("\nYou enter the shop that has a plethora of random goods.");
     typewriter("\nAs you glance around the dusty shelves, an old man emerges from a sly corner."); 
     typewriter("\nHe looks at you and smiles as he hands to you a book. You look at him, astonished.");  
-    typewriter("\nYou ask him why he gave you the book and in reply he says, *This is what you have been looking for*");
+    typewriter("\nYou ask him why he gave you the book and in reply he says, ");
+    printf("\x1B[31mThis is what you have been looking for.\033[0m");
     typewriter("\nYou stand there in utter confusion, completely unaware of why you have been given the book."); 
-    typewriter("\nYou look at its cover that says: *Am I your destiny?*");
+    typewriter("\nYou look at its cover that says: ");
+    printf("\x1B[31mAm I your destiny?\033[0m");
     typewriter("\nCurious about the book, you open it.");
     typewriter("\nAs soon as you open it, you are taken to a woody cottage covered with glittery peaks of snow protruding from the roof."); 
     typewriter("\nAs you stand at the staircase, you see two doors with different symbols on it. The first one has a dragonfly on it while the second has a star on it."); 
     typewriter("\nWhat lies in front of you is the same book."); 
     typewriter("\nYou open the book in the hope to go back to where you came from but to your surprise,");
     typewriter("\nthis time the book has nothing written on it except for one line that says:"); 
-    typewriter("\n*Every decision you make takes you to a world that is distinctly different than the other.*");
+    printf("\x1B[31m\nEvery decision you make takes you to a world that is distinctly different than the other.\033[0m");
     typewriter("\n\nOpen any one of the doors to write your own destiny!");
-    cout<<"\n\nWhich door do you choose?\n1. The door with a dragonfly on it.\n2. The door with a star on it.\n";
-    cout<<"\nChoice : ";
+    cout<<"\n\nWhich door do you choose?";
+    printf("\x1B[36m\n1. The door with a dragonfly on it.\033[0m");
+    printf("\x1B[93m\n2. The door with a star on it.\033[0m\n");
+    printf("\n\n\x1B[35mChoice : \033[0m");
     cin>>a;
     check= (a==2)?pb.intro_other_girl(0):df.intro_little_girl(0);
 
